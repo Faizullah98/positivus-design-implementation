@@ -4,6 +4,9 @@ This project is a frontend implementation of the Positivus design using HTML, CS
 
 🔗 **Live Demo**: [View the project here](https://faizullah98.github.io/positivus-design-implementation/)
 
+## Screenshot
+
+![Positivus Design Preview](https://github.com/user-attachments/assets/712ee755-0ae6-425a-8284-01173a6be49a)
 ## Features
 
 - Fully responsive layout
