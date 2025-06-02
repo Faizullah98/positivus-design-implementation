@@ -632,7 +632,7 @@ img.hide-on-desktop {
     background-color: var(--color-grey);
     border-radius: 2.813rem;
     padding: 3.75rem 0rem 6.25rem 5rem;
-    background-image: url('/img/contact\ bg.png');
+    background-image: url('../img/contact-bg.png');
     background-repeat: no-repeat;
     background-position: center right;
     background-size: 24% 80%;
