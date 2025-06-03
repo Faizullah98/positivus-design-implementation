@@ -15,9 +15,6 @@
   }
 
   /* Header  */
-  /* .navbar {
-    margin-top: 1rem;
-  } */
 
   img.brand-logo {
     width: 64%;
@@ -44,7 +41,7 @@
     border-radius: 0px 0px 0.75rem 0.75rem;
   }
 
-  .nav-links li a {
+  .nav-links li:not(:last-child) a {
     text-decoration: none;
     font-size: 1rem;
     color: var(--color-white);
@@ -138,6 +135,11 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  /* pricing  */
+  .price-table-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   /* Testimonials  */
   .testimonials-wrapper {
     gap: 2rem;
@@ -211,8 +213,13 @@
     gap: 1rem;
   }
 
-  .nav-links li a {
+  .nav-links li:not(:last-child) a {
     font-size: 0.9rem;
+  }
+
+  a.btn.secondary-button {
+    padding: 1.0rem 0.4rem;
+    display: none;
   }
 
   /* Banner  */
@@ -230,10 +237,6 @@
 
   img.hide-on-desktop {
     display: none;
-  }
-
-  a.btn.secondary-button {
-    padding: 1.0rem 0.6rem;
   }
 
   /* Testimonials  */
@@ -285,6 +288,12 @@
 
   .nav-links {
     gap: 2rem;
+  }
+  .nav-links li:not(:last-child) a {
+    font-size: 1rem;
+}
+  .nav-links li a{
+    font-size: 1rem;
   }
 
   /* banner  */

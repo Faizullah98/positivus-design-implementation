@@ -23,6 +23,7 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     font-size: 1rem;
+    scroll-behavior: smooth;
 }
 
 body,
@@ -46,6 +47,8 @@ ol[role='list'] {
 body {
     line-height: 1.5;
     font-family: "Space Grotesk", sans-serif;
+    padding-top: 94px;
+
 }
 
 h1,
@@ -119,14 +122,16 @@ textarea:not([rows]) {
     border: 1px solid var(--color-black);
     background-color: transparent;
     color: var(--color-black);
+    text-decoration: none;
 }
 
 .secondary-button:hover {
     background-color: var(--color-dark);
     color: var(--color-white);
 }
+
 /* Header */
-#navbar-header{
+#navbar-header {
     position: fixed;
     width: 100%;
     background-color: var(--color-white);
@@ -135,6 +140,7 @@ textarea:not([rows]) {
     z-index: 1;
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -148,10 +154,16 @@ textarea:not([rows]) {
     gap: 3rem;
 }
 
-.nav-links li a {
+.nav-links li:not(:last-child) a  {
     text-decoration: none;
     font-size: 1.25rem;
     color: var(--color-black);
+    padding: 0 0.6rem;
+}
+.nav-links li:not(:last-child) a.active {
+  background-color: var(--color-green);
+  color: var(--color-dark);
+  border-radius: 4px;
 }
 
 .brand-logo img {
@@ -171,13 +183,14 @@ textarea:not([rows]) {
 /* Banner  */
 .hero-section {
     margin-bottom: 70px;
+    scroll-margin-top: 94px;
 }
 
 .banner-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 140px;
+    /* margin-top: 140px; */
 }
 
 .banner-content {
@@ -254,6 +267,7 @@ img.hide-on-desktop {
 /* Services  */
 .services {
     margin-bottom: 140px;
+    scroll-margin-top: 94px;
 }
 
 .heading-section {
@@ -434,6 +448,7 @@ img.hide-on-desktop {
 /* Faqs  */
 .work-process {
     margin-bottom: 140px;
+    scroll-margin-top: 94px;
 }
 
 .faq-item {
@@ -513,6 +528,7 @@ img.hide-on-desktop {
 /* Team  */
 .team {
     margin-bottom: 140px;
+    scroll-margin-top: 94px;
 }
 
 .team-card-wrapper {
@@ -563,6 +579,114 @@ img.hide-on-desktop {
 
 .team-btn {
     text-align: right;
+}
+
+/* Pricing  */
+.pricing{
+    margin-bottom: 140px;
+    scroll-margin-top: 94px;
+}
+.pricing h2{
+    font-size: var(--font-size-xl);
+}
+.pricing p{
+    font-size: var(--para-font-size);
+}
+.price-table-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    margin-top: 40px;
+}
+.price-box{
+    border: 1px solid var(--color-dark);
+    border-width: 1px 1px 4px 1px;
+    border-style: solid;
+    border-color: var(--color-dark);
+    border-radius: 1.875rem;
+    padding: 0.6rem 2.5rem;
+}
+.price-dark-box{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+.price-dark-box .pricing-buttons .pricing-btn-green{
+    background-color: var(--color-green);
+    color: var(--color-dark);
+    width: 90%;
+}
+.price-dark-box .pricing-buttons .pricing-white-outline{
+    width: 90%;
+    border-color: #fff;
+    color: var(--color-white);
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.price-dark-box .white-hr{
+    height: 4px;
+    width: 90%;
+    background-color: var(--color-white);
+    margin-bottom: 40px;
+}
+.price-box .price-plan{
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    position: relative;
+}
+.price-box .price-plan span{
+    background-color: var(--color-green);
+    color: var(--color-dark);
+    padding: 0.2rem 0.6rem; 
+    border-radius: 50px;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 10px;
+}
+.price-box h4{
+    font-size: var(--font-size-lg);
+    margin-bottom: 40px;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.price-box span{
+    font-size: var(--para-font-size);
+}
+.pricing-buttons .pricing-btn-dark{
+    width: 90%;
+}
+.pricing-buttons .pricing-btn-outline{
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.price-box hr{
+    height: 4px;
+    width: 90%;
+    background-color: var(--color-dark);
+    margin-bottom: 40px;
+}
+.plan-features{
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.plan-features li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.plan-features li::before{
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: var(--color-green);
+    color: var(--color-dark);
+    margin-right: 12px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 /* Testimonials  */
@@ -622,6 +746,7 @@ img.hide-on-desktop {
 /* Contact us  */
 .contact-us {
     margin-bottom: 140px;
+    scroll-margin-top: 94px;
 }
 
 .contact-quote {
